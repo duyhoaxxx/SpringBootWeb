@@ -1,19 +1,30 @@
 package WebJavaSpringBoot;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 public class Girl {
 
-    @Autowired
-    Outfit outfit;
+    private String name;
 
-    public Girl(Outfit outfit) {
-        this.outfit = outfit;
+    public Girl(String name) {
+        this.name = name;
     }
 
-    // GET
-    // SET
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Girl(" + this.name + ")";
+    }
 }
