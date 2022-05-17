@@ -1,4 +1,4 @@
-package WebJavaSpringBoot;
+package WebJavaSpringBoot.controllerweb;
 
 import org.springframework.stereotype.Component;
 
